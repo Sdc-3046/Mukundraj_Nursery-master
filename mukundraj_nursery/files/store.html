@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <link rel="stylesheet" href="{% static 'assets/css/store_style.css' %}">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/svg/greenhouse.svg' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Otomanopee+One&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/modal-video/css/modal-video.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="/">Mukundraj <span>e</span>Nursery</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="logout" >Logout </a></li>
+            <li><a >Welcome , {{user.first_name}}</a></li>
+          {% else %}
+            <li><a href="login">Login</a></li>
+          {% endif %}
+
+          {% if user.is_superuser %}
+            <li><a href="siteadmin">Admin</a></li>
+          {% endif %}
+
+          <li><a href="signup">SignUp</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="store">Store</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <div id="products">
+        <h1>Products</h1>
+        <p>It is known as the most valuable crop of India. It is used as a principle ingredient of various curries and chutneys, also used in vegetables, spices, condiments, sauces and pickles. Pungency in chillies is due to the active constituent "Capsaicin", an alkaloid. The native home of chilli is considered to be Mexico with secondary origin of Guatemala. Chilli was introduced in India by the Portuguese in Goa in the middle of 17th century and since then it had rapidly spread throughout the country. Capsaicin has many medicinal properties, especially as an anti-cancerous agent and instant pain reliever. It also prevents heart diseases by dilating blood vessels. Major chilli growing countries are India, China, Pakistan, Indonesia, Korea, Turkey and Sri Lanka in Asia; Nigeria, Ghana, Tunisia and Egypt in Africa; Mexico, United States of America in North & Central America; Yugoslavia, Spain, Romania, Bulgaria, Italy and Hungary in Europe and Argentina, Peru and Brazil in South America. India is the world leader in chilli production followed by China & Pakistan. Andhra Pradesh, Maharashtra, Karnataka, Orissa, Tamil Nadu, Bihar, UP and Rajasthan are the main chilly growing states.</p>
+    </div>
+    <div id="sugarcane">
+        <h1>Sugarcane</h1>
+        <p>It is known as the most valuable crop of India. It is used as a principle ingredient of various curries and chutneys, also used in vegetables, spices, condiments, sauces and pickles. Pungency in chillies is due to the active constituent "Capsaicin", an alkaloid. The native home of chilli is considered to be Mexico with secondary origin of Guatemala. Chilli was introduced in India by the Portuguese in Goa in the middle of 17th century and since then it had rapidly spread throughout the country. Capsaicin has many medicinal properties, especially as an anti-cancerous agent and instant pain reliever. It also prevents heart diseases by dilating blood vessels. Major chilli growing countries are India, China, Pakistan, Indonesia, Korea, Turkey and Sri Lanka in Asia; Nigeria, Ghana, Tunisia and Egypt in Africa; Mexico, United States of America in North & Central America; Yugoslavia, Spain, Romania, Bulgaria, Italy and Hungary in Europe and Argentina, Peru and Brazil in South America. India is the world leader in chilli production followed by China & Pakistan. Andhra Pradesh, Maharashtra, Karnataka, Orissa, Tamil Nadu, Bihar, UP and Rajasthan are the main chilly growing states.</p>
+        <div class="sugarcane_products">
+            <div class="p1">
+                <h5>86032</h5>
+                <br>
+                <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 45
+                <br>
+                Quantity: 200kg
+                <br>
+                <div class="buy"><a href="buysp1">BUY NOW</a></div>
+            </div>
+            <div class="p2">
+                <h5>10001</h5>
+                <br>
+                <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 50
+                <br>
+                Quantity: 900kg
+                <br>
+                <div class="buy"><a href="buysp2">BUY NOW</a></div>
+            </div>
+            <div class="p3">
+                <h5>0265</h5>
+                <br>
+                <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 90
+                <br>
+                Quantity: 400kg
+                <br>
+                <div class="buy"><a href="buysp3">BUY NOW</a></div>
+            </div>
+            <div class="p4">
+                <h5>8005</h5>
+                <br>
+                <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 90
+                <br>
+                Quantity: 400kg
+                <br>
+                <div class="buy"><a href="buysp4">BUY NOW</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="chilli" >
+        <h1>Chilli</h1>
+        <p>It is known as the most valuable crop of India. It is used as a principle ingredient of various curries and chutneys, also used in vegetables, spices, condiments, sauces and pickles. Pungency in chillies is due to the active constituent "Capsaicin", an alkaloid. The native home of chilli is considered to be Mexico with secondary origin of Guatemala. Chilli was introduced in India by the Portuguese in Goa in the middle of 17th century and since then it had rapidly spread throughout the country. Capsaicin has many medicinal properties, especially as an anti-cancerous agent and instant pain reliever. It also prevents heart diseases by dilating blood vessels. Major chilli growing countries are India, China, Pakistan, Indonesia, Korea, Turkey and Sri Lanka in Asia; Nigeria, Ghana, Tunisia and Egypt in Africa; Mexico, United States of America in North & Central America; Yugoslavia, Spain, Romania, Bulgaria, Italy and Hungary in Europe and Argentina, Peru and Brazil in South America. India is the world leader in chilli production followed by China & Pakistan. Andhra Pradesh, Maharashtra, Karnataka, Orissa, Tamil Nadu, Bihar, UP and Rajasthan are the main chilly growing states.</p>
+        <div class="chilli_products">
+            <div class="p1">
+                <h5>Chilli 1</h5>
+                <br>
+                <img src="{% static 'assets/img/chili1.png' %}" alt="Chilli IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 45
+                <br>
+                Quantity: 200kg
+                <br>
+                <div class="buy"><a href="buycp1">BUY NOW</a></div>
+            </div>
+            <div class="p2">
+                <h5>Chilli 2</h5>
+                <br>
+                <img src="{% static 'assets/img/chili1.png' %}" alt="Chilli IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 50
+                <br>
+                Quantity: 900kg
+                <br>
+                <div class="buy"><a href="buycp2">BUY NOW</a></div>
+            </div>
+            <div class="p3">
+                <h5>Chilli 3</h5>
+                <br>
+                <img src="{% static 'assets/img/chili1.png' %}" alt="Chilli IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 90
+                <br>
+                Quantity: 400kg
+                <br>
+                <div class="buy"><a href="buycp3">BUY NOW</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="brinjal">
+        <h1>Brinjal</h1>
+        <p>It is known as the most valuable crop of India. It is used as a principle ingredient of various curries and chutneys, also used in vegetables, spices, condiments, sauces and pickles. Pungency in chillies is due to the active constituent "Capsaicin", an alkaloid. The native home of chilli is considered to be Mexico with secondary origin of Guatemala. Chilli was introduced in India by the Portuguese in Goa in the middle of 17th century and since then it had rapidly spread throughout the country. Capsaicin has many medicinal properties, especially as an anti-cancerous agent and instant pain reliever. It also prevents heart diseases by dilating blood vessels. Major chilli growing countries are India, China, Pakistan, Indonesia, Korea, Turkey and Sri Lanka in Asia; Nigeria, Ghana, Tunisia and Egypt in Africa; Mexico, United States of America in North & Central America; Yugoslavia, Spain, Romania, Bulgaria, Italy and Hungary in Europe and Argentina, Peru and Brazil in South America. India is the world leader in chilli production followed by China & Pakistan. Andhra Pradesh, Maharashtra, Karnataka, Orissa, Tamil Nadu, Bihar, UP and Rajasthan are the main chilly growing states.</p>
+        <div class="brinjal_products">
+            <div class="p1">
+                <h5>Brinjal 1</h5>
+                <br>
+                <img src="{% static 'assets/img/brinjal.png' %}" alt="Brinjal IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 45
+                <br>
+                Quantity: 200kg
+                <br>
+                <div class="buy"><a href="buybp1">BUY NOW</a></div>
+            </div>
+            <div class="p2">
+                <h5>Brinjal 2</h5>
+                <br>
+                <img src="{% static 'assets/img/brinjal.png' %}" alt="Brinjal IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 50
+                <br>
+                Quantity: 900kg
+                <br>
+                <div class="buy"><a href="buybp2">BUY NOW</a></div>
+            </div>
+            <div class="p3">
+                <h5>Brinjal 3</h5>
+                <br>
+                <img src="{% static 'assets/img/brinjal.png' %}" alt="Brinjal IMG" style="width:150px; height: 150px; object-fit:fill;">
+                <br>
+                Price: 90
+                <br>
+                Quantity: 400kg
+                <br>
+                <div class="buy"><a href="buybp3">BUY NOW</a></div>
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+
+      <div class="c1">
+          <h5>Mukundraj High-Tech Nursery</h5>
+          Shree Mukundraj High-Tech Nursery, Shalgaon.
+          <br>
+          Address:gdjgjidjkdnjkndjnjcnvj < GMAP IFRAME >
+          <br>
+      </div>
+
+      <div class="c2">
+            <h6>STORE</h6>
+            <ul>
+              <li><a href="#products"> Products </a></li>
+              <li><a href="#sugarcane"> Sugarcane </a></li>
+              <li><a href="#chilli"> Chilli </a></li>
+              <li><a href="#brinjal"> Brinjal </a></li>
+            </ul>
+      </div>
+
+      <div class="c3">
+          <h6>SHOP</h6>
+          <ul>
+              <li><a href="login">Sign-in</a></li>
+              <li><a href="signup">Sign-Up</a></li>
+          </ul>
+      </div>
+
+      <div class="c4">
+          <h6>ABOUT US</h6>
+          <ul>
+              <li><a href="about">About Us</a></li>
+              <li><a href="about">Contact Us</a></li>
+          </ul>
+      </div>
+
+  </footer>
+  <p class="copyright">&copy; Copyrights Mukundraj Nursery. All rights reserved.</p>
+</body>
+</html>

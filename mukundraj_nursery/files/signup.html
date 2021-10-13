@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% csrf_token %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+    <link rel="icon" href="{% static 'assets/img/svg/greenhouse.svg' %}" >
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/svg/greenhouse.svg' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+{% csrf_token %}
+<div id="main">
+    <h1 >Mukundraj Nursery Account Sign-Up</h1>
+    <div class="acc">
+                <form action="create_acc" method="POST">
+                    {% csrf_token %}
+                    Enter First Name:- <input type="text" name="first_name" style="font-family:'Acme'; border-left:None;border-right:None;border-top:None;"><br>
+                    Enter Last Name:- <input type="text" name="last_name" style="font-family:'Acme'; border-left:None;border-right:None;border-top:None;"><br>
+                    Enter Phone Number: <input type="number" name="phone_number" style="font-family:'Acme'; border-left:None;border-right:None;border-top:None;"><br>
+                    Enter Address:- <input type="text" name="address" style="font-family:'Acme'; border-left:None;border-right:None;border-top:None;"><br>
+                    Enter Password:- <input type="password" name="password" style="font-family:'Acme'; border-left:None;border-right:None;border-top:None;"><br>
+                    <input type="submit" class="submit" value="Sign Up" style="font-family:'Acme'; margin:5px; padding:5px; border-left:None;border-right:None;border-top:None;border-bottom:None;font-size:26px; background: RGB(0,210,0);  border-radius: 10px; color:White;">
+    </div>
+</div>
+</form>
+<footer id="footer">
+    <div id="c1">
+        <a>Mukundraj High-Tech Nursery</a>
+    </div>
+    <div id="c2">
+        <a>About Us</a>
+        <ul>
+            <li>About Us</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

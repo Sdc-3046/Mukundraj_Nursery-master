@@ -1,0 +1,27 @@
+body
+{
+    background:#FFF;
+    color:Black;
+}
+#drop
+{
+    position:relative;
+    display:inline-block;
+}
+.btn
+{
+    width:150px;
+    height:150px;
+}
+.content
+{
+    display:none;
+    position:absolute;
+    background:Green;
+    color:White;
+    z-index:1;
+}
+#drop:hover .content
+{
+    display:block;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% csrf_token %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+    <link rel="icon" href="{% static 'assets/img/svg/greenhouse.svg' %}" >
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/svg/greenhouse.svg' %}">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="main" >
+    <h1 >Mukundraj Nursery Login</h1>
+    <img src="https://img.icons8.com/fluent/100/000000/farmer-male.png"/>
+    <div class="acc">
+        <form action="login_acc" method="POST">
+            {% csrf_token %}
+            UserID :-<input type="text" name="username" class="creds" style="margin:5px; padding:5px;font-family:'Acme'; border-left:None;border-right:None;border-top:None;font-size:15px;color:RGB(0,255,0);"><br>
+            Password :-<input type="password" name="password" class="creds" style="margin:5px; padding:5px;font-family:'Acme';border-left:None;border-right:None;border-top:None;font-size:15px;color:RGB(0,255,0);"><br>
+            <br>
+            <input type="submit" class="submit" value="Login" style="font-family:'Acme'; margin:5px; padding:10px; border-left:None;border-right:None;border-top:None;border-bottom:None;font-size:18px; background: RGB(0,210,0);  border-radius: 15px; color:White;">
+        </form>
+        <br>
+        <div class="acc_extra">
+            <a href="forgotpass" class="fpb">Forgot Password</a>
+            <a href="signup" class="sub">SignUp Here</a>
+        </div>
+        <a href="#ea_acc" class="ealogin">Employee/Admin Login</a>
+    </div>
+    <div class="ea_acc">
+        <form action="login_acc" method="POST">
+            {% csrf_token %}
+            Employee ID :-<input type="text" name="username" class="creds" style="margin:5px; padding:5px;font-family:'Acme'; border-left:None;border-right:None;border-top:None;font-size:15px;color:RGB(0,255,0);"><br>
+            Password :-<input type="password" name="password" class="creds" style="margin:5px; padding:5px;font-family:'Acme';border-left:None;border-right:None;border-top:None;font-size:15px;color:RGB(0,255,0);"><br>
+            <br>
+            <input type="submit" class="submit" value="Login" style="font-family:'Acme'; margin:5px; padding:10px; border-left:None;border-right:None;border-top:None;border-bottom:None;font-size:18px; background: RGB(0,210,0);  border-radius: 15px; color:White;">
+        </form>
+        <br>
+        <div class="ea_acc_extra">
+            <a href="forgotpass" class="fpb">Forgot Password</a>
+            <a href="signup" class="sub">SignUp Here</a>
+        </div>
+        <a href="#ealogin" class="clogin">Customer Login</a>
+    </div>
+</div>
+<footer id="footer">
+    <div id="c1">
+        <a>Mukundraj High-Tech Nursery</a>
+    </div>
+    <div id="c2">
+        <a>About Us</a>
+        <ul>
+            <li><a href="about">About Us</a></li>
+            <li><a href="about">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+    $(.ealogin).click(function()
+        {
+            $(.acc).css({display:none});
+            $(.ea_acc).css({display:grid});
+        });
+</script>
+<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>

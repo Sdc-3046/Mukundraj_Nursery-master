@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'assets/css/product_page.css' %}">
+    <link href="{% static 'assets/fonts/Coda/Coda-Regular.ttf' %}" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <h1 class="header">Mukundraj Nursery</h1>
+        <div class="pro-pic">
+            <div class="pro-pic-1">
+                Welcome, USER NAME
+                <br>
+                Customer
+            </div>
+            <div class="pro-pic-2">
+                <img src="{% static 'assets/img/svg/user.svg' %}" alt="user_pro" class="img">
+                <div class="drop-menu">
+                    <a href=""> Profile </a>
+                    <a href=""> Sign-Up </a>
+                    <a href=""> Logout </a>
+                </div>
+                <div class="drop-menu-nav">
+                    <a href="">Profile</a>
+                    <a href="">Sign-Up</a>
+                    <a href="">Logout</a>
+                    <a href=""> Home </a>
+                    <a href=""> Store </a>
+                    <a href=""> About Us </a>
+                    <a href=""> Support </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <a href=""> Home </a>
+        <a href=""> Store </a>
+        <a href=""> About Us </a>
+        <a href=""> Support </a>
+        <a href=""> Sign-Up </a>
+        <a href=""> Login </a>
+    </nav>
+
+    <main id="main">
+        <div class="img_b">
+            <img src="{% static 'assets/img/ODHG1M0.jpg' %}" alt="{% static 'assets/img/ODHG1M0.jpg' %}" class="img">
+            <br>
+            <div class="img_bs">
+                <a href="cart" class="cart"> Add To Cart </a>
+                <a href="#buy_now" class="buy"> Buy Now </a>
+            </div>
+            </div>
+
+        <div class="dets">
+            <h2>Sugarcane 0265</h2>
+            <p>
+                This Sugarcane seeds verified by etc,etc .... BEst one etc etc....... .
+            </p>
+            <ul>
+                <li>1.</li>
+                <li>2.</li>
+                <li>3.</li>
+                <li>4.</li>
+                <li>5.</li>
+                <li>6.</li>
+            </ul>
+            </div>
+        <div class="buy_now">
+            <h4> Buy Now </h4>
+            Quantity : <input type="number">
+            <br>
+            <a href="buy" class="buy"> Check Out => </a>
+        </div>
+
+        <!--__<div class="other_products">
+            <div class="sugarcane">
+                <div class="p1">
+                    <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Sugarcane 0265</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+                <div class="p2">
+                    <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Sugarcane 0265</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+                <div class="p3">
+                    <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Sugarcane 0265</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+                <div class="p4">
+                    <img src="{% static 'assets/img/sugarcane1.png' %}" alt="Sugarcane IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Sugarcane 0265</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+            </div>
+            <div class="chilli">
+                <div class="p1">
+                    <img src="{% static 'assets/img/chili1.png' %}" alt="Chilli IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Chilli 1</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+                <div class="p2">
+                    <img src="{% static 'assets/img/chili1.png' %}" alt="Chilli IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Chilli 2</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+            </div>
+            <div class="brinjal">
+                <div class="p1">
+                    <img src="{% static 'assets/img/brinjal.png' %}" alt="Chilli IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Brinjal 1</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+                <div class="p2">
+                    <img src="{% static 'assets/img/brinjal.png' %}" alt="Chilli IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Brinjal 2</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+            </div>
+            <div class="other">
+                <div class="p1">
+                    <img src="{% static 'assets/img/brinjal.png' %}" alt="Chilli IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Other 1</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+                <div class="p2">
+                    <img src="{% static 'assets/img/brinjal.png' %}" alt="Chilli IMG" style="width:100px; height: 100px; object-fit:fill;">
+                    <br>
+                    <div class="dets">
+                        <h5>Other 2</h5>
+                        <br>
+                        Rs.900 | Rs.750 | Rs.500
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+    </main>
+
+    <footer id="footer">
+
+      <div class="c1">
+          <h5>Mukundraj High-Tech Nursery</h5>
+          Shree Mukundraj High-Tech Nursery, Shalgaon.
+          <br>
+          Address:gdjgjidjkdnjkndjnjcnvj < GMAP IFRAME >
+          <br>
+      </div>
+
+      <div class="c2">
+            <h6>STORE</h6>
+            <ul>
+              <li><a href="#products"> Products </a></li>
+              <li><a href="#sugarcane"> Sugarcane </a></li>
+              <li><a href="#chilli"> Chilli </a></li>
+              <li><a href="#brinjal"> Brinjal </a></li>
+            </ul>
+      </div>
+
+      <div class="c3">
+          <h6>SHOP</h6>
+          <ul>
+              <li><a href="login">Sign-in</a></li>
+              <li><a href="signup">Sign-Up</a></li>
+          </ul>
+      </div>
+
+      <div class="c4">
+          <h6>ABOUT US</h6>
+          <ul>
+              <li><a href="about">About Us</a></li>
+              <li><a href="about">Contact Us</a></li>
+          </ul>
+      </div>
+
+  </footer>
+    <p class="copyright">&copy; Copyrights Mukundraj Nursery. All rights reserved.</p>
+
+</body>
+</html>

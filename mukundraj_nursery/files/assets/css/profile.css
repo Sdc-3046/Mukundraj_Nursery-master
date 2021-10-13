@@ -1,0 +1,91 @@
+body
+{
+    background:rgba(255,255,255,1);
+    display:grid;
+    margin:0px;
+    padding:0px;
+    grid-template: auto 1fr auto auto/1fr 2fr;
+}
+#header
+{
+    grid-column:1/4;
+    font-size:3vh;
+    background:rgba(0,255,0,1);
+}
+#nav
+{
+    grid-column:1/2;
+    background:rgba(200,255,200,1);
+    color:Black;
+    font-size:2.5vh;
+    padding:5px;
+}
+#main
+{
+    grid-column:2/3;
+    background:rgba(200,255,200,1);
+    color:Black;
+    font-size:2.5vh;
+    padding:10px;
+}
+#footer
+{
+    grid-column:1/4;
+    font-style:normal;
+    place-items:left;
+    text-align:left;
+    color:White;
+    background:linear-gradient(180deg,rgb(40,40,40), rgb(20, 20, 20));
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    padding:15px 10px 5px 10px;
+    font-size:3vh;
+}
+.c2 ul{font-style:normal;color:White;list-style:none;text-decoration:none;}
+.c3 ul{font-style:normal;color:White;list-style:none;text-decoration:none;}
+.c4 ul{font-style:normal;color:White;list-style:none;text-decoration:none;}
+#footer a{text-decoration:none;color:White;font-style:normal;list-style:none;}
+.copyright{grid-column:1/4;width:100%; margin:0px; padding:0px; align-items:center; justify-content:center; font-size:14px; text-align:center; background:White;color:Black;}
+@media screen and (max-width:700px)
+{
+    #header{font-size:2.4vh;}
+    #nav{font-size:2vh;}
+    #main{font-size:2vh;}
+
+    #footer
+    {
+        display:grid;
+        grid-gap:10px;
+        grid-template-columns:repeat(auto-fill,minmax(50px,100px));
+        font-size:2vh;
+    }
+    #footer h6{font-size:2.4vh;}
+    #footer h5{font-size:2.4vh;}
+    #footer .c2{display:none;}
+}
+@media screen and (max-height:480px)
+{
+    #header{font-size:3vw;}
+    #nav{font-size:2vw;}
+    #main{font-size:2vw;}
+
+    #footer
+    {
+        font-size:2vw;
+    }
+    #footer h6{font-size:2.4vw;}
+    #footer h5{font-size:2.4vw;}
+}
+@media screen and(max-width:700px), screen and (max-height:450px)
+{
+    #header{font-size:18px;}
+    #nav{font-size:14px;}
+    #main{font-size:14px;}
+
+    #footer
+    {
+        font-size:14px;
+    }
+    #footer h6{font-size:15px;}
+    #footer h5{font-size:15px;}
+}
